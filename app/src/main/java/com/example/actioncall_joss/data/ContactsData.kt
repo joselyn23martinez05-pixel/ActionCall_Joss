@@ -3,8 +3,7 @@ package com.example.actioncall_joss.data
 import com.example.actioncall_joss.model.Contacto
 
 val listaContactos = listOf(
-
-    Contacto("Ana López", "4771234567", 0),
+    Contacto("JOSS DIAZ", "4771326162", 0),
     Contacto("Juan Pérez", "4772345678", 0),
     Contacto("María García", "4773456789", 0),
     Contacto("Carlos Ruiz", "4774567890", 0),
