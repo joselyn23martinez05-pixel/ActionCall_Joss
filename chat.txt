@@ -1,0 +1,7 @@
+[2023-10-27 10:00:00]
+Description: Request to follow project guidelines
+Prompt: Use .guidelines file in all request
+
+[2023-10-27 10:05:00]
+Description: Context update for MainActivity.kt and project structure
+Prompt: Use the following information if relevant. Current file path: C:/Users/josel/AndroidStudioProjects/ActionCall_Joss/app/src/main/java/com/example/actioncall_joss/MainActivity.kt. ...
