@@ -24,6 +24,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.ui.platform.LocalContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,6 +36,7 @@ fun ContactDetailScreen(
     telefono: String,
     fotoRes: Int
 ) {
+    val context = LocalContext.current
 
     Scaffold(
 
@@ -102,7 +106,12 @@ fun ContactDetailScreen(
 
             // Placeholder para ACTION_DIAL
             Button(
-                onClick = { }
+                onClick = {
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data = Uri.parse("tel:$telefono")
+                    context.startActivity(intent)
+
+                }
             ) {
                 Text("Abrir marcador")
             }
