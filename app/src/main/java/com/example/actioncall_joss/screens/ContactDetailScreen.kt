@@ -177,6 +177,27 @@ fun ContactDetailScreen(
                 Text("Llamar directo")
             }
 
+            Button(
+                onClick = {
+                    val intent = Intent(Intent.ACTION_SEND)
+
+                    intent.type = "text/plain"
+
+                    intent.putExtra(Intent.EXTRA_TEXT, "Nombre: $nombre\nTeléfono: $telefono")
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Contacto")
+
+                    val chooser = Intent.createChooser(
+                        intent,
+                        "Compartir contacto vía"
+                    )
+
+                    context.startActivity(chooser)
+                }
+            ) {
+                Text("Compartir contacto")
+            }
+
+
         }
 
     }
